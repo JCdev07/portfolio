@@ -1,0 +1,86 @@
+
+.spinner {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: none;
+}
+.configure-border-1 {
+   width: 80px;
+   height: 80px;
+   padding: 3px;
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: solid 5px $color-white;
+   animation: configure-clockwise 3s ease-in-out 0s infinite;
+}
+
+.configure-border-2 {
+   width: 80px;
+   height: 80px;
+   padding: 3px;
+   left: -115px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: solid 5px $color-primary;
+   transform: rotate(45deg);
+   animation: configure-xclockwise 3s ease-in-out 0s infinite;
+}
+
+@keyframes configure-clockwise {
+   0% {
+     transform: rotate(0);
+     border-radius: 0px;
+   }
+   25% {
+     transform: rotate(90deg);
+     border-radius: 20px;
+   }
+   50% {
+     transform: rotate(180deg);
+     border-radius: 40px;
+   }
+   75% {
+     transform: rotate(270deg);
+     border-radius: 20px;
+   }
+   100% {
+     transform: rotate(360deg);
+     border-radius: 0px;
+   }
+ }
+ 
+ @keyframes configure-xclockwise {
+   0% {
+     transform: rotate(45deg);
+   }
+   25% {
+     transform: rotate(-45deg);
+   }
+   50% {
+     transform: rotate(-135deg);
+   }
+   75% {
+     transform: rotate(-225deg);
+   }
+   100% {
+     transform: rotate(-315deg);
+   }
+ }
+ 
+ @keyframes pulse {
+   from {
+     opacity: 1;
+     transform: scale(1);
+   }
+   to {
+     opacity: .25;
+     transform: scale(.75);
+   }
+ }
+ 
+

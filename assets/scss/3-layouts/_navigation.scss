@@ -1,5 +1,5 @@
 .header {
-   height: 70px;
+   height: 100px;
    padding: 0 5rem;
    align-items: center;
 
@@ -30,7 +30,7 @@
       }
 
       &-link {
-      color: $color-grey;
+      color: $color-white;
       font-weight: 500;
       transition: all .2s;
       padding: .3rem .5rem;
