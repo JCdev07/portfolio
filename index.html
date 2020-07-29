@@ -26,15 +26,21 @@
          </div>
       </div>
 
-      <!-- Start Nav -->
-      <header class="flex header">
+      
+      <!-- Start Nav Medium to Large -->
+      <header class="flex header header-lg-to-xl">
          <nav class="header__nav flex">
             <div class="logo header__logo">
                <a href="#">Joel</a>
             </div>
-
+            
             <div class="header__nav-container flex-align-center">
-               <ul class="flex-align-center header__nav-list">
+
+               <input type="checkbox" id="menu-toggle"/>
+               <label id="trigger" for="menu-toggle"></label>
+               <label id="burger" for="menu-toggle"></label>
+
+               <ul class="flex-align-center header__nav-list menu">
                   <li class="header__nav-item">
                      <a class="header__nav-link" href="#">Home</a>
                   </li>
@@ -57,6 +63,55 @@
       </header>
       <!-- End of Nav -->
 
+      <!-- Start Nav Small to Medium -->
+      <header class="flex header header-sm-to-md">
+
+         <nav class="header__nav flex header__nav-inactive">
+            
+            <div class="header__nav-container flex">
+
+               
+
+               <ul class="flex-align-center header__nav-list menu">
+                  <li class="header__nav-item">
+                     <a class="header__nav-link" href="#">Home</a>
+                  </li>
+                  <li class="header__nav-item">
+                     <a class="header__nav-link" href="#">About</a>
+                  </li>
+                  <li class="header__nav-item">
+                     <a class="header__nav-link" href="#">Work</a>
+                  </li>
+                  <li class="header__nav-item">
+                     <a class="header__nav-link" href="#">Contact</a>
+                  </li>
+               </ul>
+               <div class="header__cta">
+                  <a href="#" class="btn">Resume</a>
+               </div>
+            </div>
+         </nav>
+
+         <div class="header__controller flex">
+            <input type="checkbox" id="menu-toggle"/>
+            <label id="trigger" for="menu-toggle"></label>
+            <label id="burger" for="menu-toggle"></label>
+
+            <div class="logo header__logo">
+               <a href="#">Joel</a>
+            </div>
+         </div>
+
+      </header>
+      <!-- End of Nav -->
+
    </div>
+
+
+
+
+
+   <!-- js -->
+   <script src="./assets/js/nav.js"></script>
 </body>
 </html>
