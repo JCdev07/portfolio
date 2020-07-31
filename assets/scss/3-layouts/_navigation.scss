@@ -107,16 +107,16 @@
 
       // Navigation Animation
       &-list.active &-item:nth-child(1) &-link {
-         transition-delay: .1s;
-      }
-      &-list.active &-item:nth-child(2) &-link {
-         transition-delay: .2s;
-      }
-      &-list.active &-item:nth-child(3) &-link {
          transition-delay: .3s;
       }
-      &-list.active &-item:nth-child(4) &-link {
+      &-list.active &-item:nth-child(2) &-link {
          transition-delay: .4s;
+      }
+      &-list.active &-item:nth-child(3) &-link {
+         transition-delay: .5s;
+      }
+      &-list.active &-item:nth-child(4) &-link {
+         transition-delay: .6s;
       }
 
       // Reverse Animation When Burger is Close
