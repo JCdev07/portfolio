@@ -1,9 +1,3 @@
-body {
-   width: 100%;
-   height: 200vh;
-   background-color: blue;
-}
-
 .header {
    width: 100%;
    background-color: $color-secondary;
@@ -11,6 +5,8 @@ body {
    margin: 0 auto;
    padding: 0 1.5rem;
    height: 70px;
+   position: absolute;
+   top: 0;
    
    &__logo {
       // background-color: $color-primary;
@@ -61,7 +57,7 @@ body {
 
       &-link:link,
       &-link:visited {
-         font-size: 1rem;
+         font-size: .8rem;
       }
       
       &-link {
@@ -73,7 +69,7 @@ body {
       }
       
       &-item {
-         line-height: 100px;
+         line-height: 70px;
          position: relative;
          
          &::before {

@@ -1,0 +1,44 @@
+body {
+   width: 100%;
+   height: 200vh;
+   background-color: $color-secondary;
+   color:$color-grey;
+}
+
+.banner {
+   margin: auto;
+   max-width: 80vw;
+   font-family: $font-secondary;
+   height: 100vh;
+   padding-top: 25vh;
+   padding-bottom: 25vh;
+   display: flex;
+   flex-direction: column;
+
+   &__head {
+      color: $color-primary;
+      font-family: $font-primary;
+      font-size: .7rem;
+      font-weight: 300;
+      margin: 0;
+   }
+   
+   &__name {
+      justify-self: flex-start;
+      margin: 0;
+      color: $color-white;
+      font-size: 3rem;
+   }
+
+   &__details {
+      font-weight: 400;
+      font-size: .9rem;
+      line-height: 1.1rem;
+      margin-bottom: 1.2rem;
+   }
+
+   & .btn {
+      margin-top: auto;;
+   }
+
+}
