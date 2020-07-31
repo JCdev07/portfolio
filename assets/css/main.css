@@ -4571,20 +4571,9 @@ template {
   display: none;
 }
 
-html {
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  padding: 0;
-  box-sizing: inherit;
-  font-size: 62.5%;
-  font-family: "Montserrat", sans-serif;
-}
-
 a:link,
 a:visited {
-  font-size: 1.8rem;
+  font-size: 1rem;
   font-family: "Roboto Mono", sans-serif;
   text-decoration: none;
 }
@@ -4876,19 +4865,21 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
-  height: 8rem;
+  height: 70px;
 }
 .header__logo {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   border: 2px solid #66FCF1;
   transform: rotate(45deg);
-  margin-left: 0.5rem;
+  margin-left: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 .header__logo-img {
   margin: auto;
-  font-size: 1.4rem;
+  font-size: 1rem;
+  font-weight: 700;
   color: #66FCF1;
   transform: rotate(-45deg);
 }
@@ -4912,12 +4903,13 @@ body {
   bottom: -100vh;
   transition: bottom 650ms cubic-bezier(0.63, 0.18, 0.57, 0.94);
   margin: 0;
+  padding: 0;
 }
 .header__nav-list.active {
   bottom: 0;
 }
 .header__nav-link:link, .header__nav-link:visited {
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 .header__nav-link {
   color: #66FCF1;
@@ -4927,7 +4919,7 @@ body {
   transition: transform 650ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .header__nav-item {
-  line-height: 8rem;
+  line-height: 100px;
   position: relative;
 }
 .header__nav-item::before {
@@ -4981,8 +4973,8 @@ body {
   transition-delay: 0.1s;
 }
 .header__hamburger {
-  width: 3.6rem;
-  height: 1.8rem;
+  width: 2.3rem;
+  height: 1.3rem;
   position: relative;
   cursor: pointer;
   line-height: 5rem;
@@ -4991,7 +4983,7 @@ body {
 .header__hamburger-line {
   width: 100%;
   height: 2px;
-  background-color: #CCD6F6;
+  background-color: #66FCF1;
   position: absolute;
   display: block;
   right: 0;
@@ -5003,23 +4995,23 @@ body {
 .header__hamburger-line:nth-child(2) {
   top: 50%;
   margin-top: -1px;
-  width: 3rem;
+  width: 1.9rem;
 }
 .header__hamburger-line:nth-child(3) {
   top: 100%;
   margin-top: -2px;
-  width: 2.3rem;
+  width: 1.5rem;
 }
 .header__hamburger.active .header__hamburger-line:nth-child(1) {
-  transform: translateY(0.8rem) rotate(45deg);
-  width: 2.5rem;
+  transform: translateY(0.6rem) rotate(45deg);
+  width: 1.6rem;
 }
 .header__hamburger.active .header__hamburger-line:nth-child(2) {
   opacity: 0;
 }
 .header__hamburger.active .header__hamburger-line:nth-child(3) {
-  transform: translateY(-0.8rem) rotate(-45deg);
-  width: 2.5rem;
+  transform: translateY(-0.6rem) rotate(-45deg);
+  width: 1.6rem;
 }
 
 @media screen and (min-width: 768px) {
