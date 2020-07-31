@@ -42,3 +42,17 @@ body {
    }
 
 }
+
+.about {
+
+   &__skills-icon {
+      color: $color-primary;
+      font-size: .7rem;
+   }
+
+   &__skill-icon {
+      height: 50px;
+      width: 50px;
+      fill: $color-black;
+   }
+}
