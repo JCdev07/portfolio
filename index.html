@@ -7,15 +7,17 @@
    <!-- CSS -->
    <link rel="stylesheet" href="./assets/css/main.css">
 
+   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
    <!-- Google Font -->
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
    <title>Document</title>
 </head>
-<body class="bg-dark">
+<body>
    <div class="container-fluid p-0">
       <!-- SPINNING SQUARES -->
-      <div class="spinner">
+      <!-- <div class="spinner d-none">
          <div class="spinner-box">
             <div class="configure-border-1">  
             <div class="configure-core"></div>
@@ -24,87 +26,35 @@
             <div class="configure-core"></div>
             </div> 
          </div>
-      </div>
+      </div> -->
 
       
-      <!-- Start Nav Medium to Large -->
-      <header class="flex header header-lg-to-xl">
-         <nav class="header__nav flex">
-            <div class="logo header__logo">
-               <a href="#">Joel</a>
+      <!-- Start Nav -->
+      <header class="header">
+         <nav class="header__nav">
+            <a href="#" class="header__logo"><span class="header__logo-img">Joel</span></a>
+            <ul class="header__nav-list">
+               <li class="header__nav-item">
+                  <a href="#" class="header__nav-link">Home</a>
+               </li>
+               <li class="header__nav-item">
+                  <a href="#" class="header__nav-link">About</a>
+               </li>
+               <li class="header__nav-item">
+                  <a href="#" class="header__nav-link">Projects</a>
+               </li>
+               <li class="header__nav-item">
+                  <a href="#" class="header__nav-link">Contact</a>
+               </li>
+            </ul>
+            <div class="header__hamburger">
+               <span class="header__hamburger-line"></span>
+               <span class="header__hamburger-line"></span>
+               <span class="header__hamburger-line"></span>
             </div>
-            
-            <div class="header__nav-container flex-align-center">
-
-               <input type="checkbox" id="menu-toggle"/>
-               <label id="trigger" for="menu-toggle"></label>
-               <label id="burger" for="menu-toggle"></label>
-
-               <ul class="flex-align-center header__nav-list menu">
-                  <li class="header__nav-item">
-                     <a class="header__nav-link" href="#">Home</a>
-                  </li>
-                  <li class="header__nav-item">
-                     <a class="header__nav-link" href="#">About</a>
-                  </li>
-                  <li class="header__nav-item">
-                     <a class="header__nav-link" href="#">Work</a>
-                  </li>
-                  <li class="header__nav-item">
-                     <a class="header__nav-link" href="#">Contact</a>
-                  </li>
-               </ul>
-               <div class="header__cta">
-                  <a href="#" class="btn">Resume</a>
-               </div>
-            </div>
-
          </nav>
       </header>
       <!-- End of Nav -->
-
-      <!-- Start Nav Small to Medium -->
-      <header class="flex header header-sm-to-md">
-
-         <nav class="header__nav flex header__nav-inactive">
-            
-            <div class="header__nav-container flex">
-
-               
-
-               <ul class="flex-align-center header__nav-list menu">
-                  <li class="header__nav-item">
-                     <a class="header__nav-link" href="#">Home</a>
-                  </li>
-                  <li class="header__nav-item">
-                     <a class="header__nav-link" href="#">About</a>
-                  </li>
-                  <li class="header__nav-item">
-                     <a class="header__nav-link" href="#">Work</a>
-                  </li>
-                  <li class="header__nav-item">
-                     <a class="header__nav-link" href="#">Contact</a>
-                  </li>
-               </ul>
-               <div class="header__cta">
-                  <a href="#" class="btn">Resume</a>
-               </div>
-            </div>
-         </nav>
-
-         <div class="header__controller flex">
-            <input type="checkbox" id="menu-toggle"/>
-            <label id="trigger" for="menu-toggle"></label>
-            <label id="burger" for="menu-toggle"></label>
-
-            <div class="logo header__logo">
-               <a href="#">Joel</a>
-            </div>
-         </div>
-
-      </header>
-      <!-- End of Nav -->
-
    </div>
 
 
