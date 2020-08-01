@@ -4665,6 +4665,11 @@ h1, h2, h3, h4, h5, h6 {
   grid-column: 1/-1;
 }
 
+.contact__form {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
 .header {
   width: 100%;
   background-color: #0A192F;
@@ -5064,6 +5069,89 @@ body {
 }
 .project__overview-container .img-overlay:hover ~ img {
   transform: scale(1.1);
+}
+
+.contact {
+  padding: 1.5rem;
+}
+.contact__container {
+  padding: 0.5rem;
+}
+.contact__container .contact__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact__container .contact__form-group {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.3rem;
+}
+.contact__container .contact__form-icon {
+  width: 20px;
+  height: 20px;
+  fill: #8892B0;
+  transform: translateY(0.2rem);
+  margin-right: 0.3rem;
+}
+.contact__container .contact__form label {
+  line-height: 0.8rem;
+  font-size: 0.8rem;
+  font-size: "Roboto Mono", sans-serif;
+  color: #8892B0;
+  position: absolute;
+  top: 0;
+  left: 6%;
+  transform: translateY(calc(-50% - .2rem));
+  transition: all 0.4s ease;
+  z-index: -10;
+}
+.contact__container .contact__form input {
+  width: 100%;
+  margin: 1rem;
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  padding: 5px 5px 5px 12px;
+  transition: all 0.3s;
+  border-bottom: 2px solid transparent;
+  display: block;
+}
+.contact__container .contact__form input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(11, 12, 16, 0.2);
+  border-bottom: 2px solid #45A29E;
+}
+.contact__container .contact__form input::-webkit-input-placeholder {
+  color: #8892B0;
+  font-size: 0.8rem;
+}
+.contact__container .contact__form input:placeholder-shown + label {
+  transform: translateY(1.5rem);
+}
+.contact__container .contact__form textarea {
+  width: 100%;
+  margin: 1rem;
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+  padding: 5px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+}
+.contact__container .contact__form textarea:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(11, 12, 16, 0.2);
+  border-bottom: 2px solid #45A29E;
+}
+.contact__container .contact__form textarea:placeholder-shown + label {
+  transform: translateY(1.5rem);
+}
+.contact__container .contact__form textarea::-webkit-input-placeholder {
+  color: #8892B0;
+  font-size: 0.8rem;
 }
 
 .btn {

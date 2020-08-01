@@ -285,3 +285,108 @@ body {
       }
    }
 }
+
+.contact {
+   padding: 1.5rem;
+
+   &__container {
+      padding: .5rem;
+
+      & .contact {
+
+         &__form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-group  {
+               width: 100%;
+               position: relative;
+               display: flex;
+               justify-content: center;
+               margin-bottom: .3rem;
+            }
+
+            &-icon {
+               width: 20px;
+               height: 20px;
+               fill: $color-grey;
+               transform: translateY(.2rem);
+               margin-right: .3rem;
+            }
+            
+            & label {
+               line-height: .8rem;
+               font-size: .8rem;
+               font-size: $font-primary;
+               color: $color-grey;
+               position: absolute;
+               top: 0;
+               left: 6%;
+               transform: translateY(calc(-50% - .2rem));
+               transition: all .4s ease;
+               z-index: -10;
+            }
+
+            & input {
+               width: 100%;
+               margin: 1rem;
+               height: 40px;
+               border-radius: 6px;
+               border: none;
+               padding: 5px 5px 5px 12px;
+               transition: all .3s;
+               border-bottom: 2px solid transparent;
+               display: block;
+
+               &:focus {
+                  outline: none;
+                  box-shadow: 0 1rem 2rem rgba($color-black, .2);
+                  border-bottom: 2px solid $color-primary-dark;
+               }
+
+               &::-webkit-input-placeholder {
+                  color: $color-grey;
+                  font-size: .8rem;
+               }
+            }
+
+            & input:placeholder-shown + label {
+               transform: translateY(1.5rem);
+            }
+
+
+            & textarea {
+               width: 100%;
+               margin: 1rem;
+               border-radius: 5px;
+               padding: 5px;
+               border: none;
+               padding: 5px;
+               border-bottom: 2px solid transparent;
+               transition: all .3s;
+
+               &:focus {
+                  outline: none;
+                  box-shadow: 0 1rem 2rem rgba($color-black, .2);
+                  border-bottom: 2px solid $color-primary-dark;
+               }
+
+               &:placeholder-shown + label {
+                  transform: translateY(1.5rem);
+               }
+
+               &::-webkit-input-placeholder {
+                  color: $color-grey;
+                  font-size: .8rem;
+               }
+
+            }
+         }
+         
+            
+
+      }
+   }
+   
+}
