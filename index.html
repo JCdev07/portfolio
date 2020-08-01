@@ -63,9 +63,11 @@
          <div class="banner__details">
             <p class="banner__details">I am a Fulsatck Developer based in Metro Manila, Specialize in building Web Applications and Responsive Websites.</p>
          </div>
-         <button class="btn btn-primary">
-            Start a Conversation
-         </button>
+         <a href="./index.html#contact">
+            <button class="btn btn-primary">
+               Start a Conversation
+            </button>
+         </a>
       </section>
       <!-- End of Banner Section -->
 
@@ -297,14 +299,14 @@
       <!-- End of Projects Section -->
 
       <!-- Contact Section -->
-      <section class="section contact">
+      <section class="section contact" id="contact">
          <h3 class="project__heading section__heading">
             Contact
          </h3>
          <div class="contact__container">
-            <form action="" class="contact__form">
+            <form action="mailto:jhonjoeldev@gmail.com" class="contact__form" method="POST" enctype="text/plain">
                <div class="contact__form-group">
-                  <input class="contact__input" type="text" id="name" placeholder="Your Name">
+                  <input name="name" class="contact__input" type="text" id="name" placeholder="Your Name" required>
                   <label class="contact__label" for="name">
                      <i>
                         <svg class="contact__form-icon">
@@ -315,7 +317,7 @@
                   </label>
                </div>
                <div class="contact__form-group">
-                  <input class="contact__input" type="email" id="email" placeholder="Your Email">
+                  <input name="email" class="contact__input" type="email" id="email" placeholder="Your Email" required>
                   <label class="contact__label" for="email">
                      <i>
                         <svg class="contact__form-icon">
@@ -326,7 +328,7 @@
                   </label>
                </div>
                <div class="contact__form-group">
-                  <input class="contact__input" type="number" id="number" placeholder="Your Number">
+                  <input name="contact" class="contact__input" type="number" id="number" placeholder="Your Number" required>
                   <label class="contact__label" for="number">
                      <i>
                         <svg class="contact__form-icon">
@@ -336,8 +338,8 @@
                      Your Number:
                   </label>
                </div>
-               <div class="contact__form-group">
-                  <textarea id="message" cols="30" rows="10" placeholder="Enter Message"></textarea>
+               <div name="message" class="contact__form-group">
+                  <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter Message" required></textarea>
                   <label class="contact__label" for="message">
                      <i>
                         <svg class="contact__form-icon">
@@ -347,6 +349,7 @@
                      Enter Message:
                   </label>
                </div>
+               <button type="submit" class="btn">Send Message</button>
             </form>
          </div>
       </section>

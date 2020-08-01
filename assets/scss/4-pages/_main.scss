@@ -82,7 +82,8 @@ body {
    // div
    &__skill-container {
       margin-top: 2rem;
-      width: 23rem;
+      width: 100%;
+      max-width: 23rem;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -97,7 +98,7 @@ body {
       font-family: $font-primary;
       
       &-desc {
-         margin: 0 auto 0 2rem;
+         align-self: flex-start;
       }
       
       &-arrow {
@@ -106,8 +107,8 @@ body {
       }
       
       &-icon {
-         height: 50px;
-         width: 50px;
+         height: 2.5rem;
+         width: 2.5rem;
          fill: $color-black;
          transition: all .3s ease;
          fill: $color-grey-dark;
@@ -169,12 +170,12 @@ body {
 
 .project {
    font-family: $font-secondary;
-
+   
    &__container {
       height: 65vh;  // todo: change height of main container for overlay effect
       margin: 2rem 0 5rem 0;
    }
-
+   
    &__details-container {
       padding: 1.5rem;
       position: absolute;
@@ -184,7 +185,7 @@ body {
       max-width: 450px;
       display: flex;
       flex-direction: column;
-
+      
       & .project__project {
          margin: .2rem 0;
          font-family: $font-primary;
@@ -193,7 +194,7 @@ body {
       }
       & .project__name {
          margin: .3rem 0;
-   
+         
          & a{
             font-family: $font-secondary;
             color: $color-grey;
@@ -212,13 +213,13 @@ body {
       & .project__tech {
          width: 100%;
          margin-top: auto;
-
+         
          &-list {
             display: flex;
             padding: 0;
             justify-content: space-evenly;
          }
-
+         
          &-item {
             font-size: .8rem;
             font-family: $font-primary;
@@ -226,25 +227,25 @@ body {
             color: $color-primary;
          }
       }
-
+      
       & .project__link {
          margin-top: auto;
          margin-bottom: 2rem;
          display: flex;
          justify-content: space-evenly;
-   
+         
          &-icon {
             fill: $color-white;
             height: 30px;
             width: 30px;
-   
+            
             &:hover {
                fill: $color-primary;
             }
          }
       }
    }
-
+   
    &__overview-container {
       text-align: center;
       position: relative;
@@ -254,7 +255,7 @@ body {
       & figure {
          margin: 0;
       }
-
+      
       & .img-overlay {
          height: 100%;
          width: 100%;
@@ -270,7 +271,7 @@ body {
             opacity: .4;
          }*/
       }
-
+      
       & img {
          object-fit: cover;
          object-position: top;
@@ -288,25 +289,26 @@ body {
 
 .contact {
    padding: 1.5rem;
-
+   
    &__container {
       padding: .5rem;
-
+      
       & .contact {
-
+         
          &__form {
             display: flex;
             flex-direction: column;
             align-items: center;
-
+            
             &-group  {
                width: 100%;
+               max-width: 400px;
                position: relative;
                display: flex;
                justify-content: center;
                margin-bottom: .3rem;
             }
-
+            
             &-icon {
                width: 20px;
                height: 20px;
@@ -327,8 +329,9 @@ body {
                transition: all .4s ease;
                z-index: -10;
             }
-
+            
             & input {
+               position: relative;
                width: 100%;
                margin: 1rem;
                height: 40px;
@@ -338,24 +341,24 @@ body {
                transition: all .3s;
                border-bottom: 2px solid transparent;
                display: block;
-
+               
                &:focus {
                   outline: none;
                   box-shadow: 0 1rem 2rem rgba($color-black, .2);
                   border-bottom: 2px solid $color-primary-dark;
                }
-
+               
                &::-webkit-input-placeholder {
                   color: $color-grey;
                   font-size: .8rem;
                }
             }
-
+            
             & input:placeholder-shown + label {
                transform: translateY(1.5rem);
             }
-
-
+            
+            
             & textarea {
                width: 100%;
                margin: 1rem;
@@ -365,28 +368,45 @@ body {
                padding: 5px;
                border-bottom: 2px solid transparent;
                transition: all .3s;
-
+               
                &:focus {
                   outline: none;
                   box-shadow: 0 1rem 2rem rgba($color-black, .2);
                   border-bottom: 2px solid $color-primary-dark;
                }
-
+               
                &:placeholder-shown + label {
                   transform: translateY(1.5rem);
                }
-
+               
                &::-webkit-input-placeholder {
                   color: $color-grey;
                   font-size: .8rem;
                }
-
+               
             }
          }
-         
-            
-
       }
    }
    
+}
+
+
+@media only screen and(min-width: 600px) {
+   .banner {
+      
+      &__details {
+         max-width: 450px;
+      }
+   }
+
+   .about {
+
+      &__skill {
+
+         &-desc {
+
+         }
+      }
+   }
 }

@@ -4260,6 +4260,16 @@ html {
   padding: 0;
 }
 
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  padding: 0;
+  box-sizing: inherit;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -4618,42 +4628,24 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-.flex {
-  display: flex;
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 112%;
+  }
 }
-
-.flex-justify-center {
-  display: flex;
-  justify-content: center;
-}
-
-.flex-align-center {
-  display: flex;
-  align-items: center;
-}
-
-.flex-align-justify-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .about__skill-list {
-  max-width: 22rem;
   display: grid;
-  grid-template-columns: repeat(2, minmax(150px, 200px));
+  grid-template-columns: repeat(2, minmax(max-content, 200px));
   column-gap: 5px;
   row-gap: 5px;
 }
 .about__skill-icons {
-  max-width: 22rem;
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  column-gap: 20px;
+  column-gap: 15px;
   row-gap: 30px;
   justify-content: center;
-  align-self: center;
 }
 
 .project__content-container {
@@ -4681,8 +4673,8 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
 }
 .header__logo {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 40px;
+  height: 40px;
   display: flex;
   border: 2px solid #66FCF1;
   transform: rotate(45deg);
@@ -4707,7 +4699,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 105vh;
   align-items: center;
   justify-content: center;
   background-color: #0A192F;
@@ -4717,6 +4709,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: bottom 650ms cubic-bezier(0.63, 0.18, 0.57, 0.94);
   margin: 0;
   padding: 0;
+  z-index: 1900;
 }
 .header__nav-list.active {
   bottom: 0;
@@ -4786,7 +4779,7 @@ h1, h2, h3, h4, h5, h6 {
   transition-delay: 0.1s;
 }
 .header__hamburger {
-  width: 2.3rem;
+  width: 35px;
   height: 1.3rem;
   position: relative;
   cursor: pointer;
@@ -4808,12 +4801,12 @@ h1, h2, h3, h4, h5, h6 {
 .header__hamburger-line:nth-child(2) {
   top: 50%;
   margin-top: -1px;
-  width: 1.9rem;
+  width: 80%;
 }
 .header__hamburger-line:nth-child(3) {
   top: 100%;
   margin-top: -2px;
-  width: 1.5rem;
+  width: 80;
 }
 .header__hamburger.active .header__hamburger-line:nth-child(1) {
   transform: translateY(0.6rem) rotate(45deg);
@@ -4913,7 +4906,8 @@ body {
 }
 .about__skill-container {
   margin-top: 2rem;
-  width: 23rem;
+  width: 100%;
+  max-width: 23rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -4926,15 +4920,15 @@ body {
   font-family: "Roboto Mono", sans-serif;
 }
 .about__skill-desc {
-  margin: 0 auto 0 2rem;
+  align-self: flex-start;
 }
 .about__skill-arrow {
   color: #66FCF1;
   font-size: 0.7rem;
 }
 .about__skill-icon {
-  height: 50px;
-  width: 50px;
+  height: 2.5rem;
+  width: 2.5rem;
   fill: #0B0C10;
   transition: all 0.3s ease;
   fill: #434c65;
@@ -5084,6 +5078,7 @@ body {
 }
 .contact__container .contact__form-group {
   width: 100%;
+  max-width: 400px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -5109,6 +5104,7 @@ body {
   z-index: -10;
 }
 .contact__container .contact__form input {
+  position: relative;
   width: 100%;
   margin: 1rem;
   height: 40px;
@@ -5154,6 +5150,11 @@ body {
   font-size: 0.8rem;
 }
 
+@media only screen and (min-width: 600px) {
+  .banner__details {
+    max-width: 450px;
+  }
+}
 .btn {
   width: 220px;
   padding: 1.2rem 2rem;
