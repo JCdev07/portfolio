@@ -3,7 +3,8 @@ body {
 }
 
 a:link,
-a:visited {
+a:visited
+a:hover {
    font-size: 1rem;
    font-family: $font-primary;
    text-decoration: none;

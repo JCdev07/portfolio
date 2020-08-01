@@ -20,3 +20,17 @@
       align-self: center;
    }
 }
+
+.project {
+
+   &__content-container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 10px;
+   }
+
+   &__details-container,
+   &__overview-container {
+      grid-column: 1 / -1;
+   }
+}

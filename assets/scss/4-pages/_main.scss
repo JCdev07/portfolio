@@ -1,6 +1,5 @@
 body {
    width: 100%;
-   height: 200vh;
    background-color: $color-secondary;
    color:$color-grey;
 }
@@ -44,13 +43,16 @@ body {
 }
 
 .section {
-
+   padding: 3rem 2rem;
+   font-size: .9rem;
+   
    &__heading {
       font-size: 1.5rem;
       display: flex;
       flex: 1;
       align-items: center;
-
+      justify-content: center;
+      
       &::after {
          content: "";
          display: block;
@@ -64,8 +66,6 @@ body {
 }
 
 .about {
-   padding: 0 2rem;
-   font-size: .9rem;
    
    // div
    &__content-container {
@@ -165,4 +165,123 @@ body {
       }
    }
    
+}
+
+.project {
+   font-family: $font-secondary;
+
+   &__container {
+      height: 65vh;  // todo: change height of main container for overlay effect
+      margin: 2rem 0 5rem 0;
+   }
+
+   &__details-container {
+      padding: 1.5rem;
+      position: absolute;
+      height: 65vh;
+      z-index: 1500;
+      width: 300px;
+      max-width: 450px;
+      display: flex;
+      flex-direction: column;
+
+      & .project__project {
+         margin: .2rem 0;
+         font-family: $font-primary;
+         color: $color-primary;
+         font-weight: 400;
+      }
+      & .project__name {
+         margin: .3rem 0;
+   
+         & a{
+            font-family: $font-secondary;
+            color: $color-grey;
+            font-weight: 700;
+            transition: all .3s ease;
+            
+            &:hover {
+               color: $color-primary;
+            }
+         }
+      }
+      & .project__description {
+         font-weight: 500;
+      }
+      
+      & .project__tech {
+         width: 100%;
+         margin-top: auto;
+
+         &-list {
+            display: flex;
+            padding: 0;
+            justify-content: space-evenly;
+         }
+
+         &-item {
+            font-size: .8rem;
+            font-family: $font-primary;
+            font-weight: 300;
+            color: $color-primary;
+         }
+      }
+
+      & .project__link {
+         margin-top: auto;
+         margin-bottom: 2rem;
+         display: flex;
+         justify-content: space-evenly;
+   
+         &-icon {
+            fill: $color-white;
+            height: 30px;
+            width: 30px;
+   
+            &:hover {
+               fill: $color-primary;
+            }
+         }
+      }
+   }
+
+   &__overview-container {
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      
+      & figure {
+         margin: 0;
+      }
+
+      & .img-overlay {
+         height: 100%;
+         width: 100%;
+         background-image: linear-gradient($color-primary-overlay-dk, $color-primary-overlay-dk);
+         position: absolute;
+         z-index: 1000;
+         top: 0;
+         left: 0;
+         transition: all .3s ease;
+         
+         // ! only for larger screen
+         /*&:hover {
+            opacity: .4;
+         }*/
+      }
+
+      & img {
+         object-fit: cover;
+         object-position: top;
+         width: 100%;
+         height: 100%;
+         z-index: -10;
+         transition: all .3s ease;
+      }
+      
+      & .img-overlay:hover ~ img {
+         transform: scale(1.1);
+      }
+   }
 }
