@@ -2,19 +2,21 @@
 .about {
 
    &__skill-list {
-      margin-right: 30px;
+      max-width: 22rem;
       display: grid;
       grid-template-columns: repeat(2, minmax(150px, 200px));
       column-gap: 5px;
       row-gap: 5px;
-
-      justify-items: end;
    }
 
    &__skill-icons {
+      max-width: 22rem;
       margin-top: 2rem;
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 10px;
+      column-gap: 20px;
+      row-gap: 30px;
+      justify-content: center;
+      align-self: center;
    }
 }

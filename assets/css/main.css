@@ -4639,18 +4639,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about__skill-list {
-  margin-right: 30px;
+  max-width: 22rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(150px, 200px));
   column-gap: 5px;
   row-gap: 5px;
-  justify-items: end;
 }
 .about__skill-icons {
+  max-width: 22rem;
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+  column-gap: 20px;
+  row-gap: 30px;
+  justify-content: center;
+  align-self: center;
 }
 
 .header {
@@ -4866,31 +4869,37 @@ body {
   margin-top: auto;
 }
 
-.about {
-  padding: 0 2rem;
-  font-size: 0.9rem;
-}
-.about__heading {
+.section__heading {
   font-size: 1.5rem;
   display: flex;
   flex: 1;
   align-items: center;
 }
-.about__heading::after {
+.section__heading::after {
   content: "";
   display: block;
   flex: 1;
-  height: 1px;
+  height: 0.5px;
   background-color: #8892B0;
   position: relative;
   margin-left: 10px;
 }
+
+.about {
+  padding: 0 2rem;
+  font-size: 0.9rem;
+}
 .about__content-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.about__content-details {
+  max-width: 400px;
 }
 .about__skill-container {
-  width: 100%;
+  margin-top: 2rem;
+  width: 23rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -4903,8 +4912,7 @@ body {
   font-family: "Roboto Mono", sans-serif;
 }
 .about__skill-desc {
-  grid-column: 1/3;
-  justify-self: start;
+  margin: 0 auto 0 2rem;
 }
 .about__skill-arrow {
   color: #66FCF1;
@@ -4916,9 +4924,6 @@ body {
   fill: #0B0C10;
   transition: all 0.3s ease;
   fill: #434c65;
-}
-.about__skill-icon:hover {
-  transform: scale(1.03);
 }
 .about__skill-icon.html:hover {
   fill: #de4b25;
