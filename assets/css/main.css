@@ -4628,9 +4628,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 37.5em) {
   html {
     font-size: 112%;
+  }
+}
+@media only screen and (min-width: 48em) {
+  html {
+    font-size: 115%;
   }
 }
 .about__skill-list {
@@ -4638,8 +4643,10 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(2, minmax(max-content, 200px));
   column-gap: 5px;
   row-gap: 5px;
+  align-self: stretch;
 }
 .about__skill-icons {
+  align-self: stretch;
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -4648,20 +4655,33 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 
-.project__content-container {
+.project__container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 10px;
 }
 .project__details-container, .project__overview-container {
-  grid-column: 1/-1;
+  grid-column: 2/12;
 }
 
 .contact__form {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, minmax(20px, 100px));
 }
 
+@media only screen and (min-width: 37.5em) {
+  .project__details-container, .project__overview-container {
+    grid-column: 3/11;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .project__overview-container {
+    grid-column: 1/8;
+  }
+  .project__details-container {
+    grid-column: 8/13;
+  }
+}
 .header {
   width: 100%;
   background-color: #0A192F;
@@ -4836,6 +4856,11 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 }
+@media only screen and (min-width: 48em) {
+  .header__nav-list {
+    width: 90%;
+  }
+}
 body {
   width: 100%;
   background-color: #0A192F;
@@ -4876,7 +4901,7 @@ body {
 }
 
 .section {
-  padding: 3rem 2rem;
+  padding: 1.5rem 2rem;
   font-size: 0.9rem;
 }
 .section__heading {
@@ -4885,6 +4910,7 @@ body {
   flex: 1;
   align-items: center;
   justify-content: center;
+  margin-bottom: 3rem;
 }
 .section__heading::after {
   content: "";
@@ -4902,16 +4928,15 @@ body {
   align-items: center;
 }
 .about__content-details {
-  max-width: 400px;
+  max-width: 350px;
 }
 .about__skill-container {
   margin-top: 2rem;
-  width: 100%;
+  max-width: 350px;
   max-width: 23rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
 }
 .about__skill {
   font-size: 0.75rem;
@@ -4965,21 +4990,25 @@ body {
 }
 
 .project {
+  display: flex;
+  flex-direction: column;
   font-family: "Montserrat", sans-serif;
 }
 .project__container {
-  height: 65vh;
+  height: 350px;
   margin: 2rem 0 5rem 0;
 }
 .project__details-container {
-  padding: 1.5rem;
+  width: 70%;
+  max-width: 90%;
+  padding: 1rem;
   position: absolute;
   height: 65vh;
   z-index: 1500;
-  width: 300px;
-  max-width: 450px;
   display: flex;
   flex-direction: column;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .project__details-container .project__project {
   margin: 0.2rem 0;
@@ -5004,7 +5033,7 @@ body {
 }
 .project__details-container .project__tech {
   width: 100%;
-  margin-top: auto;
+  margin-top: 2rem;
 }
 .project__details-container .project__tech-list {
   display: flex;
@@ -5012,14 +5041,14 @@ body {
   justify-content: space-evenly;
 }
 .project__details-container .project__tech-item {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-family: "Roboto Mono", sans-serif;
   font-weight: 300;
   color: #66FCF1;
 }
 .project__details-container .project__link {
-  margin-top: auto;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: auto;
   display: flex;
   justify-content: space-evenly;
 }
@@ -5049,9 +5078,6 @@ body {
   top: 0;
   left: 0;
   transition: all 0.3s ease;
-  /*&:hover {
-     opacity: .4;
-  }*/
 }
 .project__overview-container img {
   object-fit: cover;
@@ -5150,9 +5176,51 @@ body {
   font-size: 0.8rem;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 37.5em) {
+  .section__heading {
+    margin-left: 0.5rem;
+  }
+
   .banner__details {
     max-width: 450px;
+  }
+
+  .project__details-container {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .about__content-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .about__content-details {
+    margin: 0 1rem;
+  }
+  .about__skill-container {
+    margin: 1rem;
+  }
+
+  .project__container {
+    height: 450px;
+  }
+  .project__overview-container {
+    padding: 0 0.5rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .project__details-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+  .project .project-img {
+    overflow: hidden;
+  }
+  .project .img-overlay:hover {
+    opacity: 0.4;
   }
 }
 .btn {

@@ -6,9 +6,11 @@
       grid-template-columns: repeat(2, minmax(max-content, 200px));
       column-gap: 5px;
       row-gap: 5px;
+      align-self: stretch;
    }
 
    &__skill-icons {
+      align-self: stretch;
       margin-top: 2rem;
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -20,7 +22,7 @@
 
 .project {
 
-   &__content-container {
+   &__container {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       column-gap: 10px;
@@ -28,11 +30,34 @@
 
    &__details-container,
    &__overview-container {
-      grid-column: 1 / -1;
+      grid-column: 2 / 12;
    }
 }
 
 .contact__form {
    display: grid;
-   grid-template-columns: repeat(12, 1fr);
+   grid-template-columns: repeat(12, minmax(20px, 100px));
+}
+
+
+@media only screen and(min-width: 37.5em) {
+   .project {
+      &__details-container,
+      &__overview-container {
+         grid-column: 3 / 11;
+      }
+   }
+
+}
+
+@media only screen and(min-width: 48em) {
+   .project {
+      &__overview-container {
+         grid-column: 1 / 8;
+      }
+
+      &__details-container {
+         grid-column: 8 / 13;
+      }
+   }
 }

@@ -43,7 +43,7 @@ body {
 }
 
 .section {
-   padding: 3rem 2rem;
+   padding: 1.5rem 2rem;
    font-size: .9rem;
    
    &__heading {
@@ -52,6 +52,7 @@ body {
       flex: 1;
       align-items: center;
       justify-content: center;
+      margin-bottom: 3rem;
       
       &::after {
          content: "";
@@ -76,18 +77,17 @@ body {
    
    // div
    &__content-details {
-      max-width: 400px;
+      max-width: 350px;
    }
    
    // div
    &__skill-container {
       margin-top: 2rem;
-      width: 100%;
+      max-width: 350px;
       max-width: 23rem;
       display: flex;
       justify-content: center;
       flex-direction: column;
-      align-items: center;
    }
    
    // list
@@ -169,22 +169,26 @@ body {
 }
 
 .project {
+   display: flex;
+   flex-direction: column;
    font-family: $font-secondary;
    
    &__container {
-      height: 65vh;  // todo: change height of main container for overlay effect
+      height: 350px;
       margin: 2rem 0 5rem 0;
    }
    
    &__details-container {
-      padding: 1.5rem;
+      width: 70%;
+      max-width: 90%;
+      padding: 1rem;
       position: absolute;
       height: 65vh;
       z-index: 1500;
-      width: 300px;
-      max-width: 450px;
       display: flex;
       flex-direction: column;
+      left: 50%;
+      transform: translateX(-50%);
       
       & .project__project {
          margin: .2rem 0;
@@ -212,7 +216,7 @@ body {
       
       & .project__tech {
          width: 100%;
-         margin-top: auto;
+         margin-top: 2rem;
          
          &-list {
             display: flex;
@@ -221,7 +225,7 @@ body {
          }
          
          &-item {
-            font-size: .8rem;
+            font-size: .7rem;
             font-family: $font-primary;
             font-weight: 300;
             color: $color-primary;
@@ -229,8 +233,8 @@ body {
       }
       
       & .project__link {
-         margin-top: auto;
-         margin-bottom: 2rem;
+         margin-top: 1rem;
+         margin-bottom: auto;
          display: flex;
          justify-content: space-evenly;
          
@@ -265,11 +269,6 @@ body {
          top: 0;
          left: 0;
          transition: all .3s ease;
-         
-         // ! only for larger screen
-         /*&:hover {
-            opacity: .4;
-         }*/
       }
       
       & img {
@@ -392,20 +391,71 @@ body {
 }
 
 
-@media only screen and(min-width: 600px) {
+@media only screen and(min-width: 37.5em) {
+   .section {
+      
+      &__heading {
+         margin-left: .5rem;
+      }
+   }
+   
    .banner {
       
       &__details {
          max-width: 450px;
       }
    }
+   
+   .project {
+      &__details-container {
+         width: 60%;
+      }
+   }
+}
 
+@media only screen and(min-width: 48em) {
    .about {
+      
+      &__content-container {
+         flex-direction: row;
+         align-items: flex-start;
+         justify-content: center;
+      }
+      
+      &__content-details {
+         margin: 0 1rem;
+      }
+      
+      &__skill-container {
+         margin: 1rem;
+      }
+   }
+   
+   .project {
+      &__container {
+         // position: relative;
+         height: 450px;
+      }
+      &__overview-container {
+         padding: 0 .5rem;
+         justify-content: center;
+         align-items: flex-start;
+      }
+      &__details-container {
+         position: relative;
+         width: 100%;
+         height: 100%;
+         padding: 0;
+      }
 
-      &__skill {
+      & .project-img {
+         overflow: hidden;
+      }
 
-         &-desc {
+      & .img-overlay {
 
+         &:hover {
+            opacity: .4;
          }
       }
    }

@@ -19,8 +19,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-@media only screen and(min-width: 600px) {
+@media only screen and(min-width: 37.5em) {
    html {
       font-size: 112%;
+   }
+}
+
+@media only screen and(min-width: 48em) {
+   html {
+      font-size: 115%;
    }
 }
