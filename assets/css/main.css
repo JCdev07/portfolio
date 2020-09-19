@@ -4682,9 +4682,15 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: 8/13;
   }
 }
+@media only screen and (min-width: 62em) {
+  section {
+    max-width: 992px;
+    margin: auto;
+  }
+}
 .header {
   width: 100%;
-  background-color: #0A192F;
+  background-color: #222629;
   width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -4696,7 +4702,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   display: flex;
-  border: 2px solid #66FCF1;
+  border: 2px solid #86c232;
   transform: rotate(45deg);
   margin-left: 0.25rem;
   margin-bottom: 0.25rem;
@@ -4705,7 +4711,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: auto;
   font-size: 1rem;
   font-weight: 700;
-  color: #66FCF1;
+  color: #86c232;
   transform: rotate(-45deg);
 }
 .header__nav {
@@ -4722,7 +4728,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 105vh;
   align-items: center;
   justify-content: center;
-  background-color: #0A192F;
+  background-color: #222629;
   position: fixed;
   left: 0;
   bottom: -100vh;
@@ -4738,7 +4744,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.8rem;
 }
 .header__nav-link {
-  color: #66FCF1;
+  color: #86c232;
   display: block;
   margin: 0 2rem;
   transform: scale(0);
@@ -4753,7 +4759,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #66FCF1;
+  background-color: #86c232;
   bottom: 0;
   left: 0;
   transform: scaleX(0);
@@ -4809,7 +4815,7 @@ h1, h2, h3, h4, h5, h6 {
 .header__hamburger-line {
   width: 100%;
   height: 2px;
-  background-color: #66FCF1;
+  background-color: #86c232;
   position: absolute;
   display: block;
   right: 0;
@@ -4863,8 +4869,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 body {
   width: 100%;
-  background-color: #0A192F;
-  color: #8892B0;
+  background-color: #222629;
+  color: #8892b0;
 }
 
 .banner {
@@ -4878,7 +4884,7 @@ body {
   flex-direction: column;
 }
 .banner__head {
-  color: #66FCF1;
+  color: #86c232;
   font-family: "Roboto Mono", sans-serif;
   font-size: 0.7rem;
   font-weight: 300;
@@ -4887,7 +4893,7 @@ body {
 .banner__name {
   justify-self: flex-start;
   margin: 0;
-  color: #CCD6F6;
+  color: #ccd6f6;
   font-size: 3rem;
 }
 .banner__details {
@@ -4917,7 +4923,7 @@ body {
   display: block;
   flex: 1;
   height: 0.5px;
-  background-color: #8892B0;
+  background-color: #8892b0;
   position: relative;
   margin-left: 10px;
 }
@@ -4948,13 +4954,13 @@ body {
   align-self: flex-start;
 }
 .about__skill-arrow {
-  color: #66FCF1;
+  color: #86c232;
   font-size: 0.7rem;
 }
 .about__skill-icon {
   height: 2.5rem;
   width: 2.5rem;
-  fill: #0B0C10;
+  fill: #0b0c10;
   transition: all 0.3s ease;
   fill: #434c65;
 }
@@ -4962,31 +4968,31 @@ body {
   fill: #de4b25;
 }
 .about__skill-icon.css:hover {
-  fill: #3595D0;
+  fill: #3595d0;
 }
 .about__skill-icon.js:hover {
-  fill: #E9D44E;
+  fill: #e9d44e;
 }
 .about__skill-icon.php:hover {
-  fill: #858FB9;
+  fill: #858fb9;
 }
 .about__skill-icon.mysql:hover {
-  fill: #005E86;
+  fill: #005e86;
 }
 .about__skill-icon.sass:hover {
-  fill: #E287B2;
+  fill: #e287b2;
 }
 .about__skill-icon.bootstrap:hover {
-  fill: #5F4686;
+  fill: #5f4686;
 }
 .about__skill-icon.jquery:hover {
-  fill: #0865A6;
+  fill: #0865a6;
 }
 .about__skill-icon.gitlab:hover {
-  fill: #F59F25;
+  fill: #f59f25;
 }
 .about__skill-icon.github:hover {
-  fill: #0B0C10;
+  fill: #0b0c10;
 }
 
 .project {
@@ -5013,7 +5019,7 @@ body {
 .project__details-container .project__project {
   margin: 0.2rem 0;
   font-family: "Roboto Mono", sans-serif;
-  color: #66FCF1;
+  color: #86c232;
   font-weight: 400;
 }
 .project__details-container .project__name {
@@ -5021,12 +5027,12 @@ body {
 }
 .project__details-container .project__name a {
   font-family: "Montserrat", sans-serif;
-  color: #8892B0;
+  color: #8892b0;
   font-weight: 700;
   transition: all 0.3s ease;
 }
 .project__details-container .project__name a:hover {
-  color: #66FCF1;
+  color: #86c232;
 }
 .project__details-container .project__description {
   font-weight: 500;
@@ -5044,7 +5050,7 @@ body {
   font-size: 0.7rem;
   font-family: "Roboto Mono", sans-serif;
   font-weight: 300;
-  color: #66FCF1;
+  color: #86c232;
 }
 .project__details-container .project__link {
   margin-top: 1rem;
@@ -5053,12 +5059,12 @@ body {
   justify-content: space-evenly;
 }
 .project__details-container .project__link-icon {
-  fill: #CCD6F6;
+  fill: #ccd6f6;
   height: 30px;
   width: 30px;
 }
 .project__details-container .project__link-icon:hover {
-  fill: #66FCF1;
+  fill: #86c232;
 }
 .project__overview-container {
   text-align: center;
@@ -5072,7 +5078,7 @@ body {
 .project__overview-container .img-overlay {
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8));
+  background-image: linear-gradient(rgba(35, 39, 42, 0.5), rgba(35, 39, 42, 0.5));
   position: absolute;
   z-index: 1000;
   top: 0;
@@ -5113,7 +5119,7 @@ body {
 .contact__container .contact__form-icon {
   width: 20px;
   height: 20px;
-  fill: #8892B0;
+  fill: #8892b0;
   transform: translateY(0.2rem);
   margin-right: 0.3rem;
 }
@@ -5121,11 +5127,11 @@ body {
   line-height: 0.8rem;
   font-size: 0.8rem;
   font-size: "Roboto Mono", sans-serif;
-  color: #8892B0;
+  color: #8892b0;
   position: absolute;
   top: 0;
   left: 6%;
-  transform: translateY(calc(-50% - .2rem));
+  transform: translateY(calc(-50% - 0.2rem));
   transition: all 0.4s ease;
   z-index: -10;
 }
@@ -5144,10 +5150,10 @@ body {
 .contact__container .contact__form input:focus {
   outline: none;
   box-shadow: 0 1rem 2rem rgba(11, 12, 16, 0.2);
-  border-bottom: 2px solid #45A29E;
+  border-bottom: 2px solid #45a29e;
 }
 .contact__container .contact__form input::-webkit-input-placeholder {
-  color: #8892B0;
+  color: #8892b0;
   font-size: 0.8rem;
 }
 .contact__container .contact__form input:placeholder-shown + label {
@@ -5166,13 +5172,13 @@ body {
 .contact__container .contact__form textarea:focus {
   outline: none;
   box-shadow: 0 1rem 2rem rgba(11, 12, 16, 0.2);
-  border-bottom: 2px solid #45A29E;
+  border-bottom: 2px solid #45a29e;
 }
 .contact__container .contact__form textarea:placeholder-shown + label {
   transform: translateY(1.5rem);
 }
 .contact__container .contact__form textarea::-webkit-input-placeholder {
-  color: #8892B0;
+  color: #8892b0;
   font-size: 0.8rem;
 }
 
@@ -5230,19 +5236,19 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   border-radius: 4px;
-  color: #66FCF1;
+  color: #86c232;
   word-spacing: 3px;
 }
 
 .btn,
 .btn:active {
   outline: none;
-  border: 1px solid #66FCF1;
+  border: 1px solid #86c232;
   background-color: transparent;
 }
 
 .btn:hover {
-  background-color: rgba(102, 252, 241, 0.1);
+  background-color: rgba(134, 194, 50, 0.1);
 }
 
 .spinner {
@@ -5261,7 +5267,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 5px #CCD6F6;
+  border: solid 5px #ccd6f6;
   animation: configure-clockwise 3s ease-in-out 0s infinite;
 }
 
@@ -5273,7 +5279,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 5px #66FCF1;
+  border: solid 5px #86c232;
   transform: rotate(45deg);
   animation: configure-xclockwise 3s ease-in-out 0s infinite;
 }
@@ -5328,11 +5334,11 @@ body {
   }
 }
 .bg-dark {
-  background-color: #0A192F;
+  background-color: #222629;
 }
 
 .bg-light {
-  background-color: #CCD6F6;
+  background-color: #ccd6f6;
 }
 
 /*# sourceMappingURL=main.css.map */

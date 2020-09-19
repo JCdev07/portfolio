@@ -1,6 +1,5 @@
 // Skill section
 .about {
-
    &__skill-list {
       display: grid;
       grid-template-columns: repeat(2, minmax(max-content, 200px));
@@ -21,7 +20,6 @@
 }
 
 .project {
-
    &__container {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -39,7 +37,6 @@
    grid-template-columns: repeat(12, minmax(20px, 100px));
 }
 
-
 @media only screen and(min-width: 37.5em) {
    .project {
       &__details-container,
@@ -47,7 +44,6 @@
          grid-column: 3 / 11;
       }
    }
-
 }
 
 @media only screen and(min-width: 48em) {
@@ -59,5 +55,12 @@
       &__details-container {
          grid-column: 8 / 13;
       }
+   }
+}
+
+@media only screen and(min-width: 62em) {
+   section {
+      max-width: 992px;
+      margin: auto;
    }
 }

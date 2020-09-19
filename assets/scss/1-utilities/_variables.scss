@@ -1,24 +1,36 @@
 // Bootstrap Theming
-$color-primary: #66FCF1;
-$color-primary-dark: #45A29E;
-$color-primary-overlay-lt: rgb(10,25,47,.7);
-$color-primary-overlay-dk: rgb(10,25,47,.8);
-$color-secondary: #0A192F;
-$color-secondary-lt: #172A45;
-$color-grey: #8892B0;
-$color-grey-lt: #c2c7c9;
-$color-grey-dark: #434c65;
-$color-black: #0B0C10;
-$color-white: #CCD6F6;
+// $color-primary: #66FCF1;
+// $color-primary-dark: #45A29E;
+// $color-primary-overlay-lt: rgb(10,25,47,.7);
+// $color-primary-overlay-dk: rgb(10,25,47,.8);
+// $color-secondary: #0A192F;
+// $color-secondary-lt: #172A45;
+// $color-grey: #8892B0;
+// $color-grey-lt: #c2c7c9;
+// $color-grey-dark: #434c65;
+// $color-black: #0B0C10;
+// $color-white: #CCD6F6;
 
+$color-primary: #86c232;
+$color-primary-dark: #45a29e;
+$color-primary-overlay-lt: rgba(35, 39, 42, 0.4);
+$color-primary-overlay-dk: rgba(35, 39, 42, 0.5);
+$color-secondary: #222629;
+$color-secondary-lt: #23272a;
+
+$color-grey: #8892b0;
+$color-grey-lt: #ffffff;
+$color-grey-dark: #434c65;
+$color-black: #0b0c10;
+$color-white: #ccd6f6;
 
 // MARGIN || PADDING
-$unit-xs: .5rem;
+$unit-xs: 0.5rem;
 $unit-s: 1rem;
 $unit-m: 1.5rem;
 $unit-l: 2.5rem;
 $unit-xl: 4rem;
 
 // FONT
-$font-primary: 'Roboto Mono', sans-serif;
-$font-secondary: 'Montserrat', sans-serif;
+$font-primary: "Roboto Mono", sans-serif;
+$font-secondary: "Montserrat", sans-serif;
