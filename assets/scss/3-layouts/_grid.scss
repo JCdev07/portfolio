@@ -62,5 +62,9 @@
    section {
       max-width: 992px;
       margin: auto;
+
+      &.banner {
+         max-width: 1000px;
+      }
    }
 }
